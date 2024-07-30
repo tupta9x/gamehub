@@ -1,0 +1,38 @@
+/* src/components/GameGrid.css */
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.game-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.game-card h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,32 @@
+/* src/components/GameDetails.css */
+
+.game-details {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.game-details iframe {
+  display: block;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.game-details button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-details button:hover {
+  background-color: #21a1f1;
+}

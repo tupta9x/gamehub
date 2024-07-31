@@ -1,0 +1,100 @@
+/* src/pages/Home.css */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #a2c2e5,
+    #f5f7fa
+  ); /* Gradient background */
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Ensure relative positioning for sticky */
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 10px;
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.game-card-wrapper {
+  grid-column: span 1;
+  grid-row: span 1;
+  cursor: pointer;
+}
+
+/* Ensure selected-game is sticky and fixed size */
+.selected-game {
+  grid-column: 1 / span 6; /* Chiếm 6 cột */
+  grid-row: 1 / span 3; /* Chiếm 3 hàng */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 20px; /* Adjust as needed */
+  z-index: 10;
+  width: 100%; /* Ensure full width within grid */
+  max-width: 100%; /* Ensure it doesn't exceed the grid width */
+  height: 600px; /* Fixed height */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.selected-game-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.selected-game iframe {
+  width: 100%;
+  height: 500px; /* Tăng chiều cao của iframe */
+  border: none;
+}
+
+.selected-game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.selected-game-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.fullscreen-button {
+  background-color: #007bff; /* Màu nút fullscreen */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.selected-game-description {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}
